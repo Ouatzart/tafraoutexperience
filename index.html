@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Discover hiking, climbing, and outdoor adventures with Adventure Atlas."
+    />
+    <title>Adventure Atlas — Find your next way out there</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body id="top">
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Adventure Atlas home">
+        <span class="brand-mark" aria-hidden="true">A</span>
+        <span>adventure<span class="brand-light">atlas</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#experiences">Explore</a>
+        <a href="#how-it-works">How it works</a>
+        <a class="nav-cta" href="#plan">Plan a trip <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> A little more outside</p>
+          <h1>Find your next<br />way <span>out there.</span></h1>
+          <p class="hero-copy">
+            Big views, new trails, and stories worth telling. Discover outdoor
+            experiences and start planning your next adventure.
+          </p>
+          <a class="button button-light" href="#experiences">
+            Explore experiences <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+        <div class="hero-note">
+          <span class="note-line"></span>
+          <span>For curious feet and open skies</span>
+        </div>
+      </section>
+
+      <section class="intro section-wrap" id="experiences">
+        <div>
+          <p class="eyebrow eyebrow-dark">Start exploring</p>
+          <h2>Choose your kind<br />of <span>outside.</span></h2>
+        </div>
+        <p class="intro-copy">
+          Whether you’re chasing a summit or taking the scenic route, there’s
+          an adventure with your name on it.
+        </p>
+      </section>
+
+      <section class="experience-section section-wrap" aria-label="Outdoor experiences">
+        <div class="filters" role="group" aria-label="Filter experiences">
+          <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All adventures</button>
+          <button class="filter-button" type="button" data-filter="hiking" aria-pressed="false">Hiking</button>
+          <button class="filter-button" type="button" data-filter="climbing" aria-pressed="false">Climbing</button>
+          <button class="filter-button" type="button" data-filter="exploring" aria-pressed="false">Exploring</button>
+        </div>
+        <p class="sample-note">Starter examples — update these with real local experiences.</p>
+        <div class="experience-grid" id="experience-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="how-section" id="how-it-works">
+        <div class="section-wrap how-inner">
+          <div class="how-heading">
+            <p class="eyebrow">Good trips start here</p>
+            <h2>Less scrolling.<br /><span>More stories.</span></h2>
+          </div>
+          <div class="steps">
+            <article class="step">
+              <span class="step-number">01</span>
+              <h3>Find your feeling</h3>
+              <p>Pick the kind of day you want, from a quiet trail to a big climb.</p>
+            </article>
+            <article class="step">
+              <span class="step-number">02</span>
+              <h3>Ask a local</h3>
+              <p>Tell us what you’re looking for and we’ll help shape the details.</p>
+            </article>
+            <article class="step">
+              <span class="step-number">03</span>
+              <h3>Get out there</h3>
+              <p>Make a plan, pack your curiosity, and enjoy the journey.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="plan-section section-wrap" id="plan">
+        <div class="plan-copy">
+          <p class="eyebrow eyebrow-dark">Your next chapter</p>
+          <h2>Got a place<br />in <span>mind?</span></h2>
+          <p>
+            Share a few details and we’ll help you think through your next
+            outdoor escape.
+          </p>
+          <div class="plan-aside">
+            <span class="aside-icon" aria-hidden="true">✳</span>
+            <span>New destination? No problem. We can start with the idea.</span>
+          </div>
+        </div>
+        <form class="inquiry-form" id="inquiry-form">
+          <label>
+            Your name
+            <input name="name" type="text" autocomplete="name" placeholder="How should we call you?" required />
+          </label>
+          <label>
+            Email address
+            <input name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
+          </label>
+          <label>
+            What would you like to do?
+            <select name="activity" required>
+              <option value="" selected disabled>Choose an adventure</option>
+              <option>Hiking</option>
+              <option>Climbing</option>
+              <option>Exploring</option>
+              <option>Something else</option>
+            </select>
+          </label>
+          <label>
+            Tell us a little more <span class="optional">(optional)</span>
+            <textarea name="message" rows="3" placeholder="A destination, date, or just an idea..."></textarea>
+          </label>
+          <button class="button button-dark" type="submit">Send an inquiry <span aria-hidden="true">↗</span></button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          <p class="form-footnote">This starter form is a demo and does not send or store your information yet.</p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#">
+        <span class="brand-mark" aria-hidden="true">A</span>
+        <span>adventure<span class="brand-light">atlas</span></span>
+      </a>
+      <p>Made for the moments beyond the map.</p>
+      <a href="#top" class="back-to-top">Back to top ↑</a>
+    </footer>
+  </body>
+</html>
